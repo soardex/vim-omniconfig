@@ -44,6 +44,8 @@ set showmode
 
 set tabpagemax=15
 set cursorline
+highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 highlight clear SignColumn
 highlight clear LineNr
 
@@ -52,8 +54,8 @@ set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set showcmd
 
 set laststatus=2
-set statusline=%<%f\
-set statusline+=%w%h%m%r
+set statusline=%<%f
+set statusline+=\ %w%h%m%r
 set statusline+=\ [%{&ff}/%Y]
 set statusline+=\ [%{getcwd()}]
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%

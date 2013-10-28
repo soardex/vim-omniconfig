@@ -25,3 +25,10 @@ vim-omniconfig
                                                   
 
 A complete vimrc config.
+
+10 - 28 - 13
+================
+-- Added column highlight color.
+-- Fixed the statusline bar.
+
+
