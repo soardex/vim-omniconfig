@@ -14,9 +14,11 @@ set viewoptions=folds,options,cursor,unix,slash
 set virtualedit=onemore
 
 autocmd Filetype * setlocal omnifunc=syntaxcomplete#Complete
-set completeopt=menu,preview,longest
+"set completeopt=menu,preview,longest
 
 set background=dark
+colorscheme solarized
+
 set mouse=a
 set mousehide
 scriptencoding utf-8
@@ -85,10 +87,38 @@ set tags=./tags;/,~/.vimtags
 nmap <silent> <C-E> :NERDTreeToggle<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
 
+autocmd FileType cpp setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+set completeopt=menu,menuone
+
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/gl
+set tags+=~/.vim/tags/glm
+set tags+=~/.vim/tags/sdl2
+
+let OmniCpp_MayCompleteDot = 1      " autocomplete with .
+let OmniCpp_MayCompleteArrow = 1    " autocomplete with ->
+let OmniCpp_MayCompleteScope = 1    " autocomplete with ::
+let OmniCpp_SelectFirstItem = 2     " select first item (but don't insert)
+let OmniCpp_NamespaceSearch = 2     " search namespaces in this and included files
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
+let OmniCpp_LocalSearchDecl = 1     " don't require special style of function opening braces
+
+map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=Makefile -f ~/Projects/voc/tags/tags ~/Projects/voc/src<CR>
+set tags+=~/Projects/voc/tags/tags
+
+nmap <F7> :w<CR>
+nmap <silent> <F5> :make<CR>
+nmap <silent> <C-F5> :make clean all<CR>
+nmap <silent> <F6> :!~/Projects/voc/src/build/bin/voc<CR>
+nmap <F4> :e %<.h<CR>
+nmap <F3> :e %<.cpp<CR>
 
