@@ -26,6 +26,10 @@ vim-omniconfig
 
 A complete vimrc config. :P
 
+05 - 01 - 14
+================
+-- Commented out my personal configuration.
+
 10 - 28 - 13
 ================
 -- Added column highlight color.

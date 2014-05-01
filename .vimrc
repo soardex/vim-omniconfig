@@ -99,11 +99,6 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set completeopt=menu,menuone
 
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/glm
-set tags+=~/.vim/tags/sdl2
-
 let OmniCpp_MayCompleteDot = 1      " autocomplete with .
 let OmniCpp_MayCompleteArrow = 1    " autocomplete with ->
 let OmniCpp_MayCompleteScope = 1    " autocomplete with ::
@@ -112,13 +107,21 @@ let OmniCpp_NamespaceSearch = 2     " search namespaces in this and included fil
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 let OmniCpp_LocalSearchDecl = 1     " don't require special style of function opening braces
 
-map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=Makefile -f ~/Projects/voc/tags/tags ~/Projects/voc/src<CR>
-set tags+=~/Projects/voc/tags/tags
-
 nmap <F7> :w<CR>
 nmap <silent> <F5> :make<CR>
 nmap <silent> <C-F5> :make clean all<CR>
-nmap <silent> <F6> :!~/Projects/voc/src/build/bin/voc<CR>
 nmap <F4> :e %<.h<CR>
 nmap <F3> :e %<.cpp<CR>
+
+
+" My Personal Configuration
+
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/gl
+"set tags+=~/.vim/tags/glm
+"set tags+=~/.vim/tags/sdl2
+"
+"map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=Makefile -f ~/Projects/voc/tags/tags ~/Projects/voc/src<CR>
+"set tags+=~/Projects/voc/tags/tags
+"nmap <silent> <F6> :!~/Projects/voc/src/build/bin/voc<CR>
 
