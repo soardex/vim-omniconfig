@@ -1,4 +1,16 @@
 " vim: set sw=4 ts=4 sts=4 background=dark
+"         ___           ___     
+"        /\__\         /\__\    
+"       /:/  /        /::|  |   
+"      /:/  /        /:|:|  |   
+"     /:/__/  ___   /:/|:|  |__ 
+"     |:|  | /\__\ /:/ |:| /\__\
+"     |:|  |/:/  / \/__|:|/:/  /
+"     |:|__/:/  /      |:/:/  / 
+"      \::::/__/       |::/  /  
+"       ~~~~           /:/  /   
+"                      \/__/    
+
 
 set nocompatible
 syntax off
@@ -13,14 +25,12 @@ set shortmess+=filmnrxoOtT
 set viewoptions=folds,options,cursor,unix,slash
 set virtualedit=onemore
 
-autocmd Filetype * setlocal omnifunc=syntaxcomplete#Complete
-"set completeopt=menu,preview,longest
-
 set background=light
 colorscheme solarized
 
 set mouse=a
 set mousehide
+set encoding=utf-8
 scriptencoding utf-8
 
 set nu
@@ -46,6 +56,7 @@ set showmode
 
 set tabpagemax=15
 set cursorline
+
 highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 highlight clear SignColumn
@@ -57,11 +68,11 @@ set showcmd
 
 " status line
 set laststatus=2
-set statusline=%<%f
-set statusline+=\ %w%h%m%r
-set statusline+=\ [%{&ff}/%Y]
-set statusline+=\ [%{getcwd()}]
-set statusline+=%=%-14.(%l,%c%V%)\ %p%%
+"set statusline=%<%f
+"set statusline+=\ %w%h%m%r
+"set statusline+=\ [%{&ff}/%Y]
+"set statusline+=\ [%{getcwd()}]
+"set statusline+=%=%-14.(%l,%c%V%)\ %p%%
 
 set backspace=indent,eol,start
 set linespace=0
@@ -72,7 +83,6 @@ set smartcase
 set wildmode=list:longest,full
 set listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 set list
-"set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " convert spaces to tabs when reading file
 autocmd! bufreadpost * set noexpandtab | retab! 4
@@ -94,8 +104,10 @@ vnoremap . :normal .<CR>
 set tags=./tags;/,~/.vimtags
 
 nmap <silent> <C-E> :NERDTreeToggle<CR>
-nmap <silent> <F9> :TagbarToggle<CR>
+nmap <silent> <S-F9> :TagbarToggle<CR>
+nmap <silent> <S-F10> :UndoTreeToggle<CR>
 
+autocmd Filetype * setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType cpp setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -109,18 +121,29 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set completeopt=menu,menuone
 
-let OmniCpp_MayCompleteDot = 1      " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1    " autocomplete with ->
-let OmniCpp_MayCompleteScope = 1    " autocomplete with ::
-let OmniCpp_SelectFirstItem = 2     " select first item (but don't insert)
-let OmniCpp_NamespaceSearch = 2     " search namespaces in this and included files
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
-let OmniCpp_LocalSearchDecl = 1     " don't require special style of function opening braces
+let OmniCpp_MayCompleteDot=1        " autocomplete with .
+let OmniCpp_MayCompleteArrow=1      " autocomplete with ->
+let OmniCpp_MayCompleteScope=1      " autocomplete with ::
+let OmniCpp_SelectFirstItem=2       " select first item (but don't insert)
+let OmniCpp_NamespaceSearch=2       " search namespaces in this and included files
+let OmniCpp_ShowPrototypeInAbbr=1   " show function prototype (i.e. parameters) in popup window
+let OmniCpp_LocalSearchDecl=1       " don't require special style of function opening braces
 
 nmap <F2> :w<CR>
 nmap <F4> :q<CR>
-nmap <silent> <F5> :make<CR>
-nmap <silent> <C-F5> :make clean all<CR>
+nmap <silent> <S-F5> :make<CR>
+nmap <silent> <C-F6> :make clean all<CR>
+
+let g:airline_powerline_fonts=1
+
+if has("gui_running")
+    set guifont=DejaVu\ Sans\ Mono\ Powerline:h9
+endif
+
+if has("persistent_undo")
+    set undodir='~/.undodir/'
+    set undofile
+endif
 
 " my person configuration
 "set tags+=~/.vim/tags/cpp
