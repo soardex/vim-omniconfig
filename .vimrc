@@ -105,7 +105,7 @@ set tags=./tags;/,~/.vimtags
 
 nmap <silent> <C-E> :NERDTreeToggle<CR>
 nmap <silent> <S-F9> :TagbarToggle<CR>
-nmap <silent> <S-F10> :UndoTreeToggle<CR>
+nmap <silent> <S-F8> :UndotreeToggle<CR>
 
 autocmd Filetype * setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType cpp setlocal omnifunc=omni#cpp#complete#Main
