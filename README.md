@@ -1,31 +1,47 @@
-vim-omniconfig 
-================
+# vim-omniconfig
 
-          _____                    _____          
-         /\    \                  /\    \         
-        /::\____\                /::\____\        
-       /:::/    /               /::::|   |        
-      /:::/    /               /:::::|   |        
-     /:::/    /               /::::::|   |        
-    /:::/____/               /:::/|::|   |        
-    |::|    |               /:::/ |::|   |        
-    |::|    |     _____    /:::/  |::|   | _____  
-    |::|    |    /\    \  /:::/   |::|   |/\    \ 
-    |::|    |   /::\____\/:: /    |::|   /::\____\
-    |::|    |  /:::/    /\::/    /|::|  /:::/    /
-    |::|    | /:::/    /  \/____/ |::| /:::/    / 
-    |::|____|/:::/    /           |::|/:::/    /  
-    |:::::::::::/    /            |::::::/    /   
-    \::::::::::/____/             |:::::/    /    
-     ~~~~~~~~~~                   |::::/    /     
-                                  /:::/    /      
-                                 /:::/    /       
-                                 \::/    /        
-                                  \/____/         
+
+```
+      ___                       ___           ___     
+     /\  \          ___        /\  \         /\  \    
+    /::\  \        /\  \       \:\  \        \:\  \   
+   /:/\:\  \       \:\  \       \:\  \        \:\  \  
+  /::\~\:\  \      /::\__\       \:\  \        \:\  \ 
+ /:/\:\ \:\__\  __/:/\/__/ _______\:\__\ _______\:\__\
+ \/__\:\ \/__/ /\/:/  /    \::::::::/__/ \::::::::/__/
+      \:\__\   \::/__/      \:\~~\~~      \:\~~\~~    
+       \/__/    \:\__\       \:\  \        \:\  \     
+                 \/__/        \:\__\        \:\__\    
+                               \/__/         \/__/    
                                                   
+```
 
-My Complete Setup for Vim 7.3+
+vim-omniconfig is my personal setup for Vim 7.3+.
 
+![alt text](https://drive.google.com/uc?export=download&id=0B-blOoIU6Jp5VDNSZkVHQWQ3akU "screenshot")
+
+
+List of bundled plugins for vim:
+
++ csapprox
++ ctrlp
++ delimitmate
++ nerdcommenter
++ nerdtree
++ tagbar
++ tlib_vim
++ undotree
++ vim-addon-mw-utils
++ vim-airline
++ vim-bufferline
++ vim-colors-solarized
++ vim-easymotion
++ vim-fugitive
++ vim-snipmate
++ vim-snippets
+
+
+```
 LICENSE
 ================
 Copyright © 2014 Fitz Abucay
@@ -35,8 +51,9 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+```
 
-
+```
 05 - 10 - 14
 ================
 -- Submoduled some needed plugins.
@@ -55,4 +72,5 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 10 - 30 - 13
 ================
 -- Added folder structure.
+```
 
