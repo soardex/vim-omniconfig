@@ -18,7 +18,7 @@
 
 vim-omniconfig is my personal setup for Vim 7.3+.
 
-![alt text](https://drive.google.com/uc?export=download&id=0B-blOoIU6Jp5VDNSZkVHQWQ3akU "screenshot")
+![screenshot](https://drive.google.com/uc?export=view&id=0B-blOoIU6Jp5VDNSZkVHQWQ3akU "screenshot")
 
 
 List of bundled plugins for vim:
