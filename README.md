@@ -16,28 +16,36 @@
                                                   
 ```
 
-vim-omniconfig is my personal setup for Vim 7.3+.
+vim-omniconfig is my personal optimized setup for Vim 7.3+.
 
 ![screenshot](https://drive.google.com/uc?export=view&id=0B-blOoIU6Jp5VDNSZkVHQWQ3akU "screenshot")
 
-List of bundled plugins for vim:
+#### List of bundled plugins for vim:
 
-+ csapprox
-+ ctrlp
-+ delimitmate
-+ nerdcommenter
-+ nerdtree
-+ tagbar
-+ tlib_vim
-+ undotree
-+ vim-addon-mw-utils
-+ vim-airline
-+ vim-bufferline
-+ vim-colors-solarized
-+ vim-easymotion
-+ vim-fugitive
-+ vim-snipmate
-+ vim-snippets
++ [vim-pathogen](https://github.com/tpope/vim-pathogen)
++ [csapprox](https://github.com/godlygeek/csapprox)
++ [ctrlp](https://github.com/kien/ctrlp.vim)
++ [delimitmate](https://github.com/Raimondi/delimitMate)
++ [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
++ [nerdtree](https://github.com/scrooloose/nerdtree)
++ [tagbar](https://github.com/majutsushi/tagbar)
++ [tlib_vim](https://github.com/tomtom/tlib_vim)
++ [undotree](https://github.com/mbbill/undotree)
++ [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils)
++ [vim-airline](https://github.com/bling/vim-airline)
++ [vim-bufferline](https://github.com/bling/vim-bufferline)
++ [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
++ [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
++ [vim-fugitive](https://github.com/tpope/vim-fugitive)
++ [vim-snipmate](https://github.com/garbas/vim-snipmate)
++ [vim-snippets](https://github.com/honza/vim-snippets)
+
+#### Additional plugins (not bundled):
+
++ [typescript-vim](https://github.com/leafgarland/typescript-vim)
++ [vim-node](https://github.com/moll/vim-node)
++ [snipmate-nodejs](https://github.com/jamescarr/snipmate-nodejs)
++ [tabular](https://github.com/godlygeek/tabular)
 
 #### License:
 
